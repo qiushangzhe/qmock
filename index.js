@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 var app = require(__dirname+'/src/server.js');
 var dir = require(__dirname+'/src/mkProject.js');
 var argv = require('yargs').argv;
