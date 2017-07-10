@@ -1,19 +1,23 @@
 {
-  "name": "qmock",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "bin": {
-    "qm": "index.js"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "express": "^4.15.3",
-    "yargs": "^8.0.2"
-  }
+    "name": "qmock",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "bin": {
+        "qm": "index.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/qiushangzhe/qmock.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "express": "^4.15.3",
+        "yargs": "^8.0.2"
+    }
 }
