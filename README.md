@@ -37,3 +37,7 @@ http://127.0.0.1:1234/test/main
 对应假数据文件位置为
 
 mock数据文件夹/databast/test/main.json
+
+## 更新
+
+执行``npm update qmock -g``
