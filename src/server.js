@@ -1,7 +1,6 @@
 var express = require('express');
 var app = express();
-var api = require('./router');
-
+var api = require(__dirname+'/router');
 app.all('*',function(req,res,next){
     res.header("Access-Control-Allow-Origin", "*");
     res.header("Access-Control-Allow-Headers", "X-Requested-With");

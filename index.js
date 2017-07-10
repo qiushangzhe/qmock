@@ -1,5 +1,5 @@
-var app = require('./src/server.js');
-var dir = require('./src/mkProject.js');
+var app = require(__dirname+'/src/server.js');
+var dir = require(__dirname+'/src/mkProject.js');
 var argv = require('yargs').argv;
 if(argv.port){
     app.listen(argv.port);
