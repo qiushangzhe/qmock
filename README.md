@@ -1,7 +1,7 @@
 # qmock
 
 > 简单易用的mock-server
-
+> 随便跨域，咔咔的。jsonp是什么？
 ## 使用说明
 
 #### step 1.安装qmock(全局安装)
