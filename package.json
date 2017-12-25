@@ -17,9 +17,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "body-parser": "^1.17.2",
     "colors": "^1.1.2",
-    "express": "^4.15.3",
-    "yargs": "^8.0.2"
+    "yargs": "^8.0.2",
+    "kcors": "^2.2.1",
+    "koa": "^2.3.0"
   }
 }

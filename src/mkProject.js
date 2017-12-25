@@ -1,4 +1,4 @@
 var fs = require('fs');
-if(!fs.existsSync('database')){
-    fs.mkdirSync('database');
+if(!fs.existsSync('mock')){
+    fs.mkdirSync('mock');
 }
