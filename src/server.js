@@ -9,7 +9,7 @@ const app = new Koa();
 const fs = require('fs');
 
 app.use(async ctx => {
-    ctx.set('Access-Control-Allow-Origin', ctx.request.headers.host);
+    ctx.set('Access-Control-Allow-Origin', ctx.request.headers.origin);
     ctx.set('Access-Control-Allow-Credentials', true); // 是否支持cookie跨域
     ctx.set('Access-Control-Allow-Headers', 'Content-Type,Content-Length, Authorization, Accept,X-Requested-With');
     ctx.set('Access-Control-Allow-Methods', 'PUT,POST,GET,DELETE,OPTIONS');
