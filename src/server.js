@@ -25,7 +25,7 @@ app.use(async ctx => {
 function getJsonFile(path) {
   const final_path = process.cwd() + '/mock' + path + '.json';
   console.log(`获取json文件${final_path}`);
-  if (ctx.url === '/favicon.ico') {
+  if (path === '/favicon.ico') {
     return false;
   }
   if (fs.existsSync(final_path)) {
