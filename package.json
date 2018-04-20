@@ -19,7 +19,6 @@
   "dependencies": {
     "colors": "^1.1.2",
     "yargs": "^8.0.2",
-    "kcors": "^2.2.1",
     "koa": "^2.3.0"
   }
 }
