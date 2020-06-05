@@ -1,7 +1,7 @@
 const Koa = require('koa');
 const app = new Koa();
 const fs = require('fs');
-
+const JSON5 = require('json5');
 app.use(async (ctx, next) => {
   ctx.set('Access-Control-Allow-Origin', ctx.request.headers.origin);
   ctx.set('Access-Control-Allow-Credentials', true); // 是否支持cookie跨域
@@ -23,16 +23,17 @@ app.use(async ctx => {
 });
 
 function getJsonFile(path) {
-  const final_path = process.cwd() + '/mock' + path + '.json';
-  console.log(`获取json文件${final_path}`);
-  if (path === '/favicon.ico') {
-    return false;
+  if (path === '/favicon.ico' || path === '/robots.txt') { return false; } // 如果请求的是 图标或者爬虫的东西 自动跳过
+  let final_path = process.cwd() + '/mock' + path + '.json5';
+  if( fs.existsSync(final_path) ) { // 如果json5文件存在 直接读取json5
+    return JSON5.parse(fs.readFileSync(final_path).toString());
   }
-  if (fs.existsSync(final_path)) {
-    return fs.readFileSync(final_path).toString();
-  } else {
-    return false;
+  final_path = process.cwd() + '/mock' + path + '.js'; // 如果当前是有js文件，那么使用js的
+  if( fs.existsSync(final_path) ) {
+    const data = eval(fs.readFileSync(final_path).toString())
+    return data
   }
+  
 }
 
 module.exports = app;
